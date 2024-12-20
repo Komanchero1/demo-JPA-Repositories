@@ -3,14 +3,15 @@ package org.example.demo_jpa_repositories.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.IdClass;
-import lombok.Getter;
-import lombok.Setter;
-import org.example.demo_jpa_repositories.entity.PersonId;
 
+
+
+//класс-сущность JPA, которая представляет собой объект в базе данных
+//он аннотирован как @Entity, что указывает на то, что он должен быть 
+// сопоставлен с таблицей в базе данных
 @Entity
 @IdClass(PersonId.class)
-@Getter
-@Setter
+
 public class Persons {
 
     @Id
@@ -24,6 +25,7 @@ public class Persons {
 
     private String phoneNumber;
 
+
     private String cityOfResidence;
 
     public Persons() {
@@ -36,4 +38,45 @@ public class Persons {
         this.phoneNumber = phoneNumber;
         this.cityOfResidence = cityOfResidence;
     }
+    //геттеры, сеттеры
+    public String getCityOfResidence() {
+        return cityOfResidence;
+    }
+
+    public void setCityOfResidence(String cityOfResidence) {
+        this.cityOfResidence = cityOfResidence;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
+
