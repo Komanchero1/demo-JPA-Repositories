@@ -38,6 +38,16 @@ public class Persons {
         this.phoneNumber = phoneNumber;
         this.cityOfResidence = cityOfResidence;
     }
+
+    //переопредeляем метод
+    @Override
+    public String toString() {
+        return name +" " + surname + " возраст: " +
+                age + ", " + "номер телефона: " + phoneNumber +
+                              ", проживает в " + cityOfResidence + "\n";
+
+    }
+    
     //геттеры, сеттеры
     public String getCityOfResidence() {
         return cityOfResidence;
